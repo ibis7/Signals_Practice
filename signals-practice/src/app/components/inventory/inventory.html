@@ -1,0 +1,11 @@
+<div>{{ quantity() }}</div>
+
+<select
+  [ngModel]="quantity()"
+  (change)="onQuantityChange($any($event.target).value)"
+>
+  <option disabled selected value="">Choose an option</option>
+  <option *ngFor="let option of options()" [value]="option">
+    {{ option }}
+  </option>
+</select>

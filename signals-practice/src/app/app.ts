@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Inventory } from './components/inventory/inventory';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+  standalone: true,
+  imports: [Inventory],
 })
-export class App {
-  protected title = 'signals-practice';
-}
+export class App {}
