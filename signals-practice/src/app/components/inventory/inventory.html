@@ -9,3 +9,10 @@
     {{ option }}
   </option>
 </select>
+
+<div>Vehicle {{ selectedVehicle().name }}</div>
+<div>Vehicle Type: {{ selectedVehicle().type }}</div>
+<div>Vehicle Price: {{ selectedVehicle().price | number : "1.2-2" }}</div>
+<div style="font-weight: bold">
+  Total: {{ calculatedPrice() | number : "1.2-2" }}
+</div>
